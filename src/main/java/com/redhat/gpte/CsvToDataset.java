@@ -35,7 +35,7 @@ public class CsvToDataset {
     // Reads a CSV file with header, called books.csv, stores it in a dataframe
     Dataset<Row> df = spark.read().format("csv")
         .option("header", "true")
-        .load("src/main/resources/books.csv");
+        .load("./data/books.csv");
 
     // Shows at most 5 rows from the dataframe
     df.show();
